@@ -7,7 +7,7 @@ parser.add_argument("-v", "--verbosity", choices=[0, 1, 2], type=int, help="incr
 args = parser.parse_args()
 na_su = args.name_surname
 
-birthday = get_birthday()
+birthday = get_birthday(name)
 if birthdays.get_birthdays(na_su):
     if args.verbosity == 2:
         print("{} was born on {}".format(na_su, birthday(na_su)))
